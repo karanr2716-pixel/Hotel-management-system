@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f172a">
+  <title>StayEase — Thoughtful stays across India</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{ink:"#1E293B",gold:"#D97706",cream:"#F8F7F4"},fontFamily:{display:["Playfair Display","Georgia","serif"],sans:["DM Sans","sans-serif"]}}}};</script>
+  <style>
+    html{scroll-behavior:smooth;scroll-padding-top:82px}body{margin:0}.font-display{font-family:"Playfair Display",Georgia,serif}.eyebrow{font-size:10px;font-weight:700;letter-spacing:.2em;color:#d97706}.filter-field{display:flex;min-width:0;flex-direction:column;justify-content:center;gap:7px;padding:8px 14px;border-right:1px solid #e8eaf0}.filter-field>span:first-child{font-size:9px;font-weight:700;letter-spacing:.12em;color:#718096}.filter-field select,.filter-field input{width:100%;border:0;background:transparent;color:#1e293b;font:500 13px "DM Sans",sans-serif;outline:0}.filter-field select{cursor:pointer}.filter-field input[type=date]{min-height:20px}.filter-action{display:flex;align-items:center}.room-photo,.hotel-photo{height:225px;overflow:hidden;background:#e8e7e2}.room-photo img,.hotel-photo img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease}.room-card:hover .room-photo img,.hotel-card:hover .hotel-photo img{transform:scale(1.05)}.hotel-card,.room-card{overflow:hidden;border:1px solid #e8eaf0;border-radius:20px;background:#fff;box-shadow:0 8px 24px rgba(30,41,59,.08);transition:transform .25s,box-shadow .25s}.hotel-card:hover,.room-card:hover{transform:translateY(-3px);box-shadow:0 18px 34px rgba(30,41,59,.14)}.amenity-pill{display:inline-flex;align-items:center;gap:5px;border-radius:999px;background:#f5f5f2;padding:6px 9px;font-size:10px;color:#596579}.loading-card{grid-column:1/-1;border:1px dashed #d7dbe2;border-radius:18px;padding:36px;text-align:center;color:#818b9b}.status-pill{display:inline-flex;border-radius:999px;background:#e8f5ed;padding:6px 10px;font-size:10px;font-weight:700;color:#277347}.status-pill.cancelled{background:#fff0ee;color:#b3483f}.status-pill.completed{background:#f4efe5;color:#8b6a36}.table-action{border:0;background:transparent;padding:4px;color:#ba6508;font-size:11px;font-weight:600}.booking-row{display:flex;align-items:center;justify-content:space-between;gap:18px;border:1px solid #e8eaf0;border-radius:18px;background:white;padding:20px;box-shadow:0 7px 20px rgba(30,41,59,.05)}.modal-card,.owner-modal{position:fixed;inset:50% auto auto 50%;max-height:min(90vh,850px);width:min(1200px,calc(100% - 24px));transform:translate(-50%,-50%);overflow:auto;border:0;border-radius:24px;padding:0;background:#fff;color:#1e293b;box-shadow:0 26px 90px rgba(15,23,42,.3)}.modal-card{width:min(460px,calc(100% - 28px));padding:34px}.modal-card::backdrop,.owner-modal::backdrop{background:rgba(15,23,42,.62);backdrop-filter:blur(4px)}.form-label{display:grid;gap:8px;font-size:11px;font-weight:600;color:#596579}.form-label input{width:100%;border:1px solid #dfe3e9;border-radius:12px;padding:13px 14px;background:white;color:#1e293b;font:500 13px "DM Sans",sans-serif;outline:0}.form-label input:focus{border-color:#d97706;box-shadow:0 0 0 3px rgba(217,119,6,.12)}.form-error{min-height:0;margin:0;color:#b3483f;font-size:11px}.admin-table{width:100%;border-collapse:collapse;white-space:nowrap;text-align:left}.admin-table th{background:#f8f7f4;padding:13px 15px;font-size:9px;font-weight:700;letter-spacing:.12em;color:#7a8492}.admin-table td{border-top:1px solid #f0f1f3;padding:13px 15px;font-size:12px;color:#465267}.admin-table tbody tr:nth-child(even){background:#fbfbfa}.metric-card{border:1px solid #e8eaf0;border-radius:18px;background:white;padding:19px;box-shadow:0 7px 20px rgba(30,41,59,.05)}.metric-card span{font-size:9px;font-weight:700;letter-spacing:.13em;color:#8993a2}.metric-card strong{display:block;margin-top:8px;font-family:"Playfair Display",Georgia,serif;font-size:25px;color:#1e293b}.toast-message{position:fixed;z-index:60;bottom:22px;left:50%;max-width:calc(100% - 30px);transform:translate(-50%,20px);border-radius:12px;background:#1e293b;padding:13px 20px;color:white;font-size:12px;box-shadow:0 10px 30px rgba(15,23,42,.25);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}.toast-message.show{transform:translate(-50%,0);opacity:1}.room-badge{position:absolute;left:14px;top:14px;border-radius:999px;background:rgba(255,255,255,.94);padding:7px 10px;font-size:9px;font-weight:700;letter-spacing:.1em;color:#334155}.room-image-wrap{position:relative}.room-rating{position:absolute;right:13px;top:13px;border-radius:999px;background:rgba(15,23,42,.78);padding:7px 10px;font-size:11px;font-weight:600;color:white;backdrop-filter:blur(5px)}@media(max-width:1023px){.filter-field{border:0;border-bottom:1px solid #e8eaf0;padding:9px 10px}.filter-action{align-items:stretch}.filter-action button{align-self:flex-end}}@media(max-width:639px){.booking-row{align-items:flex-start;flex-wrap:wrap;padding:16px}.room-photo,.hotel-photo{height:205px}.modal-card{padding:30px 24px}}@media(min-width:768px) and (max-height:600px){#home{height:calc(100svh - 72px);min-height:350px}#home>div{min-height:0;height:100%;align-items:flex-start;padding:24px 24px 115px}#home h1{font-size:clamp(2.5rem,7vh,3.8rem);line-height:1}#home h1+p{margin-top:12px;font-size:13px;line-height:1.5}#search-form{bottom:10px;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px;padding:8px;transform:translate(-50%,0)}#search-form .filter-action{grid-column:auto}#search-form .filter-field{padding:5px 6px}#search-form .filter-field>span:first-child{font-size:8px}#search-form .filter-field select,#search-form .filter-field input{font-size:11px}#search-form .filter-action button{margin:0;padding:9px 5px;font-size:10px;white-space:nowrap}}
+  </style>
+  <style>
+    @media (max-width: 639px) and (max-height: 600px) {
+      #home {
+        display: flex;
+        height: auto;
+        min-height: 0;
+        flex-direction: column;
+        padding-bottom: 16px;
+      }
+
+      #home .hero-content {
+        min-height: 0;
+        align-items: flex-start;
+        padding: 36px 20px 20px;
+      }
+
+      #home .hero-content h1 {
+        font-size: clamp(2.5rem, 10vw, 3.5rem);
+        line-height: 1;
+      }
+
+      #home .hero-content p {
+        margin-top: 12px;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      #search-form {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        width: auto;
+        max-width: none;
+        margin: 0 14px;
+        transform: none;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4px;
+        padding: 12px;
+      }
+
+      #search-form .filter-field {
+        padding: 7px;
+      }
+
+      #search-form .filter-action {
+        grid-column: span 2;
+      }
+
+      #search-form .filter-action button {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body class="bg-white font-sans text-ink antialiased">
+  <header class="sticky top-0 z-40 border-b border-white/10 bg-slate-900 text-white shadow-lg">
+    <div class="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 lg:px-10">
+      <a class="flex items-center gap-3" href="#home" aria-label="StayEase home">
+        <span class="grid h-10 w-10 place-items-center rounded-xl bg-amber-600 font-display text-2xl">S</span>
+        <span class="text-xs font-bold tracking-[.2em]">STAYEASE<span class="mt-1 block text-[9px] font-medium tracking-[.25em] text-slate-400">STAYS, MADE SPECIAL</span></span>
+      </a>
+      <nav class="hidden items-center gap-8 text-sm text-slate-300 md:flex" aria-label="Main navigation">
+        <a class="nav-item py-2 transition hover:text-amber-300" href="#home">Home</a>
+        <a class="nav-item py-2 transition hover:text-amber-300" href="#rooms">Explore rooms</a>
+        <a class="nav-item py-2 transition hover:text-amber-300" href="#my-bookings">My bookings</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button id="owner-open" class="rounded-full border border-amber-400/50 px-4 py-2.5 text-xs font-semibold text-amber-200 transition hover:bg-amber-500 hover:text-white">View all bookings</button>
+        <button id="menu-toggle" class="grid h-10 w-10 place-items-center rounded-full border border-white/20 text-lg md:hidden" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="hidden border-t border-white/10 bg-slate-900 px-6 py-3 md:hidden">
+      <a class="block py-2 text-sm" href="#home">Home</a><a class="block py-2 text-sm" href="#rooms">Explore rooms</a><a class="block py-2 text-sm" href="#my-bookings">My bookings</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="relative isolate min-h-[610px] overflow-visible bg-slate-800 text-white">
+      <img class="absolute inset-0 -z-20 h-full w-full object-cover" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2200&q=85" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=2200&q=85';" alt="Luxury hotel framed by tropical gardens">
+      <div class="absolute inset-0 -z-10 bg-gradient-to-r from-slate-950/80 via-slate-900/55 to-slate-900/15"></div>
+      <div class="hero-content mx-auto flex min-h-[520px] max-w-7xl items-center px-6 pb-36 pt-16 lg:px-12">
+        <div class="max-w-2xl">
+          <span class="inline-flex rounded-full border border-white/30 bg-white/10 px-4 py-2 text-[10px] font-semibold uppercase tracking-[.2em] text-amber-200 backdrop-blur">India, a little more extraordinary</span>
+          <h1 class="mt-7 font-display text-5xl leading-[1.08] sm:text-6xl lg:text-7xl">Find your place<br>in the <em class="font-medium text-amber-300">beautiful.</em></h1>
+          <p class="mt-6 max-w-lg text-sm leading-7 text-white/80 sm:text-base">Palace mornings, ocean evenings, and everything in between. Discover thoughtful stays across India's most-loved cities.</p>
+        </div>
+      </div>
+      <form id="search-form" class="absolute bottom-0 left-1/2 grid w-[calc(100%-2rem)] max-w-6xl -translate-x-1/2 translate-y-1/2 grid-cols-2 gap-3 rounded-2xl bg-white/95 p-4 text-ink shadow-2xl backdrop-blur-md sm:grid-cols-3 lg:grid-cols-[1.2fr_1fr_1fr_1fr_.8fr_auto] lg:gap-0 lg:p-3">
+        <label class="filter-field"><span>DESTINATION</span><select id="city-filter"><option value="">All destinations</option></select></label>
+        <label class="filter-field"><span>ROOM STYLE</span><select id="type-filter"><option value="">Any room</option><option value="STANDARD">Standard</option><option value="EXECUTIVE_SUITE">Executive suite</option><option value="DELUXE_ROYAL">Deluxe royal</option><option value="OCEAN_VIEW">Ocean view</option></select></label>
+        <label class="filter-field"><span>CHECK IN</span><input type="date" id="search-checkin"></label>
+        <label class="filter-field"><span>CHECK OUT</span><input type="date" id="search-checkout"></label>
+        <label class="filter-field"><span>GUESTS</span><select id="guest-filter"><option value="1">1 guest</option><option value="2" selected>2 guests</option><option value="3">3 guests</option><option value="4">4 guests</option></select></label>
+        <div class="filter-action col-span-2 sm:col-span-3 lg:col-span-1"><button class="w-full rounded-xl bg-amber-600 px-6 py-4 text-sm font-semibold text-white transition hover:bg-amber-700 lg:ml-3 lg:w-auto">Apply filters <span class="ml-2">→</span></button></div>
+      </form>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-5 pb-10 pt-36 text-center sm:pt-40 lg:px-10">
+      <p class="eyebrow">THE STAYEASE COLLECTION</p>
+      <h2 class="mt-3 font-display text-3xl sm:text-4xl">A change of scenery.<br><em class="font-medium text-gold">A feeling that stays.</em></h2>
+      <p class="mx-auto mt-5 max-w-xl text-sm leading-7 text-slate-500">From the pink lanes of Jaipur to Goa's salt-kissed shores, find a stay that makes the journey part of the story.</p>
+    </section>
+
+    <section id="destinations" class="mx-auto max-w-7xl px-5 pb-16 lg:px-10">
+      <div class="mb-6"><p class="eyebrow">SOMEWHERE TO BEGIN</p><h2 class="mt-2 font-display text-3xl">Loved <em class="font-medium text-gold">destinations.</em></h2></div>
+      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" id="hotel-grid"><div class="loading-card">Discovering beautiful stays...</div></div>
+    </section>
+
+    <section class="bg-cream py-16 sm:py-20" id="rooms">
+      <div class="mx-auto max-w-7xl px-5 lg:px-10">
+        <div class="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between"><div><p class="eyebrow">A ROOM WITH YOUR NAME ON IT</p><h2 class="mt-2 font-display text-3xl sm:text-4xl">Stay somewhere <em class="font-medium text-gold">special.</em></h2></div><p class="text-sm text-slate-500" id="results-label">Thoughtful stays, across India</p></div>
+        <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3" id="room-grid"><div class="loading-card">Finding your room...</div></div>
+      </div>
+    </section>
+
+    <section id="my-bookings" class="mx-auto max-w-7xl px-5 py-16 lg:px-10">
+      <div class="mb-7"><p class="eyebrow">YOUR TRAVEL JOURNAL</p><h2 class="mt-2 font-display text-3xl">My <em class="font-medium text-gold">bookings.</em></h2><p class="mt-2 text-sm text-slate-500">Look up reservations by booking ID or the email address used when booking.</p></div>
+      <form id="lookup-form" class="flex max-w-2xl flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:flex-row">
+        <input id="lookup-value" class="min-w-0 flex-1 rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-amber-600 focus:ring-2 focus:ring-amber-100" required placeholder="Email address or booking ID" aria-label="Email address or booking ID">
+        <button class="rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-700">Find booking <span class="ml-2 text-amber-300">→</span></button>
+      </form>
+      <p id="lookup-message" class="mt-3 text-sm text-rose-700" role="status"></p>
+      <div class="mt-5 grid gap-4" id="bookings-list"><p class="text-sm text-slate-400">Enter your email or booking ID to see reservation details.</p></div>
+    </section>
+
+    <section class="bg-slate-900 px-5 py-16 text-center text-white sm:py-20"><p class="text-2xl text-amber-300">✳</p><blockquote class="mx-auto mt-4 max-w-3xl font-display text-2xl leading-relaxed sm:text-3xl">“The best journeys take you home to yourself.”</blockquote><p class="mt-5 text-[10px] font-semibold tracking-[.25em] text-amber-200">MAKE ROOM FOR THE MOMENT</p></section>
+  </main>
+
+  <footer class="bg-slate-950 px-5 py-9 text-white sm:px-10"><div class="mx-auto flex max-w-7xl flex-col justify-between gap-4 sm:flex-row sm:items-center"><p class="text-xs font-bold tracking-[.2em]">STAYEASE <span class="font-normal tracking-normal text-slate-400">· Stays, made special</span></p><p class="text-xs text-slate-400">Good stays make great stories.</p></div></footer>
+
+  <dialog id="booking-dialog" class="modal-card">
+    <form method="dialog" class="absolute right-4 top-3"><button class="text-2xl text-slate-400 hover:text-ink" aria-label="Close">×</button></form>
+    <p class="eyebrow">MAKE IT YOURS</p><h2 class="font-display text-3xl">Book your <em class="text-gold">stay.</em></h2><p class="mb-5 mt-2 text-sm text-slate-500" id="modal-room-name"></p>
+    <form id="booking-form" class="grid gap-4">
+      <label class="form-label">Guest name<input required maxlength="120" id="guest-name" autocomplete="name" placeholder="Your full name"></label>
+      <label class="form-label">Email address<input required type="email" maxlength="255" id="guest-email" autocomplete="email" placeholder="you@example.com"></label>
+      <label class="form-label">Phone number<input required maxlength="50" id="guest-phone" autocomplete="tel" placeholder="+91 98765 43210"></label>
+      <div class="grid grid-cols-2 gap-3"><label class="form-label">Check in<input type="date" id="booking-checkin" required></label><label class="form-label">Check out<input type="date" id="booking-checkout" required></label></div>
+      <div class="flex justify-between border-t border-slate-100 pt-4 text-sm"><span class="text-slate-500">Your total</span><strong id="quote-total">Choose your dates</strong></div>
+      <p class="form-error" id="booking-error" role="status"></p><button class="rounded-xl bg-amber-600 px-5 py-4 text-sm font-semibold text-white transition hover:bg-amber-700">Confirm booking <span class="ml-2">→</span></button>
+    </form>
+  </dialog>
+
+  <dialog id="owner-dialog" class="owner-modal">
+    <div class="flex items-start justify-between gap-4 border-b border-slate-100 p-5 sm:p-7"><div><p class="eyebrow">OWNER LOG</p><h2 class="mt-1 font-display text-2xl sm:text-3xl">All <em class="font-medium text-gold">bookings.</em></h2><p class="mt-1 text-xs text-slate-500">Guest contact and reservation details</p></div><form method="dialog"><button class="text-2xl text-slate-400 hover:text-ink" aria-label="Close owner log">×</button></form></div>
+    <div class="p-5 sm:p-7"><div id="owner-metrics" class="mb-5 grid grid-cols-2 gap-3 sm:grid-cols-3"></div><div class="overflow-x-auto rounded-xl border border-slate-200"><table class="admin-table"><thead><tr><th>Guest</th><th>Contact</th><th>Property / room</th><th>Check-in / out</th><th>Total</th><th>Status</th><th>Action</th></tr></thead><tbody id="owner-bookings"><tr><td colspan="7">Loading bookings...</td></tr></tbody></table></div><p id="owner-message" class="mt-3 text-sm text-rose-700" role="status"></p></div>
+  </dialog>
+  <div class="toast-message" id="toast" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
